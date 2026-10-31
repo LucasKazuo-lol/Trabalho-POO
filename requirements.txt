@@ -1,0 +1,2 @@
+# Dependência externa usada nos painéis, textos coloridos e impressão formatada.
+rich==14.3.4

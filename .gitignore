@@ -1,0 +1,5 @@
+# Ambiente virtual e arquivos gerados pelo Python não fazem parte do código-fonte.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
