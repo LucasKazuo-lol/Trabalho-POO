@@ -5,7 +5,7 @@
   "falhas": 0,
   "erros": 0,
   "ignorados": 0,
-  "duracaoSegundos": 8.09,
+  "duracaoSegundos": 8.16,
   "cenario": {
     "sessoes": 3,
     "minutos": 95,
@@ -16,5 +16,11 @@
   "interface": "Eventos e controles de uma janela real Tkinter, ocultada durante o teste",
   "integracao": "POST/GET contra copia temporaria do backend C# e persistencia apos reiniciar",
   "persistenciaBackendTestada": "JSON local",
-  "mysqlAtivoValidado": false
+  "mysqlAtivoValidado": false,
+  "organizacao": "Pacotes modelos, servicos, interface e exemplos",
+  "entradasValidadas": [
+    "python main.py --console",
+    "python -m modelos.Disciplina",
+    "python -m exemplos.Demonstracao"
+  ]
 }

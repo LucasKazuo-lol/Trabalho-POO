@@ -1,9 +1,9 @@
 from abc import abstractmethod
 import json
 
-from Disciplina import Disciplina
-from Interfaces import IExportavelJson
-from Validacoes import ValidarInteiro
+from modelos.Disciplina import Disciplina
+from modelos.Interfaces import IExportavelJson
+from servicos.Validacoes import ValidarInteiro
 
 
 class SessaoEstudo(IExportavelJson):

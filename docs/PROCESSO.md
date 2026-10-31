@@ -10,7 +10,7 @@ Usei o script enviado como referência de escrita: construtores explícitos, atr
 
 Mantive as matérias Full Stack, POO e Design de Interface. `Disciplina` recebe código, nome, categoria e carga semanal. Cargas menores ou iguais a zero assumem 2. `CalcularCargaEmMinutos` retorna horas × 60 e `ExibirResumo` retorna a string do enunciado.
 
-O arquivo continua executável sozinho com `python Disciplina.py`. O Rich usa `Text` para preservar os colchetes do código e destacar nome e minutos antes de envolver o resultado em `Panel`.
+O arquivo continua executável sozinho com `python -m modelos.Disciplina`. O Rich usa `Text` para preservar os colchetes do código e destacar nome e minutos antes de envolver o resultado em `Panel`.
 
 ## Missão 2 — MetaEstudo
 
@@ -90,3 +90,7 @@ A integração foi testada com JSON local do backend, sem MySQL ativo. O resulta
 6. Mostre 95 minutos, 270 XP e 95% da meta, consulte o feedback e notifique o responsável.
 7. Exporte o relatório e feche/reabra a tela para demonstrar persistência.
 8. Consulte o diagnóstico do backend e diferencie o teste em JSON da opção MySQL descrita no README.
+
+## Organização em pacotes
+
+As classes foram agrupadas em `modelos/`; a coordenação, comunicação HTTP e notificações em `servicos/`; a janela em `interface/`; e a demonstração Rich em `exemplos/`. A raiz mantém `main.py`, documentação e inicializadores. Os imports e o alvo de mock dos testes foram ajustados aos caminhos dos pacotes. Os caminhos do SQLite e do backend continuam ancorados na raiz do projeto.

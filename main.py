@@ -2,7 +2,7 @@
 import argparse
 from pathlib import Path
 
-from ClienteBackendEstudo import ClienteBackendEstudo, RepositorioSQLite
+from servicos.ClienteBackendEstudo import ClienteBackendEstudo, RepositorioSQLite
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     argumentos.add_argument("--backend", default="http://localhost:5080", help="Endereço da API C#")
     opcoes = argumentos.parse_args()
     if opcoes.console:
-        from Demonstracao import Demonstrar
+        from exemplos.Demonstracao import Demonstrar
         Demonstrar()
         return
 
@@ -24,7 +24,7 @@ def main():
         repositorio = ClienteBackendEstudo(opcoes.backend)
 
     # Tkinter é importado somente no modo gráfico.
-    from TelaEstudo import TelaEstudo
+    from interface.TelaEstudo import TelaEstudo
     TelaEstudo(repositorio).mainloop()
 
 

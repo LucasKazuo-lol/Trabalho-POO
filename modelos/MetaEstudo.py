@@ -1,6 +1,6 @@
 import json
 
-from Interfaces import IExportavelJson
+from modelos.Interfaces import IExportavelJson
 
 
 class MetaEstudo(IExportavelJson):

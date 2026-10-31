@@ -8,16 +8,16 @@ A aplicação oferece **tela gráfica em Tkinter**, demonstração no terminal c
 
 | Missão | Implementação | Onde encontrar |
 |---|---|---|
-| 1 — Classes e objetos | Disciplina, três matérias e conversão de horas para minutos | `Disciplina.py`, `Plataforma.py` |
-| 2 — Encapsulamento | Meta privada, avanço controlado e validações | `MetaEstudo.py` |
-| 3 — Abstração e herança | Usuario abstrato; Administrador, Responsavel e Discente | `Usuarios.py` |
-| 4 — Polimorfismo dinâmico | Pomodoro, Exercícios e Leitura com XP e feedback próprios | `Sessoes.py` |
-| 5 — Sobrecarga | Três formas de chamar RegistrarEstudo | `Usuarios.py`, `Demonstracao.py` |
-| 6 — Interfaces | INotificador e IExportavelJson; painel e e-mail simulado | `Interfaces.py`, `Notificadores.py` |
-| 7 — Associação e agregação | Responsável/discentes e trilha/disciplinas | `Usuarios.py`, `Relacionamentos.py` |
-| 8 — Composição e dependência | Plano/itens e serviço de alerta | `Relacionamentos.py` |
-| 9 — Tela gráfica | Formulário, perfis, histórico, XP e barra de progresso | `TelaEstudo.py` |
-| 10 — Integração | POST de sessões/metas e GET do histórico no backend C# | `ClienteBackendEstudo.py`, `Backend/` |
+| 1 — Classes e objetos | Disciplina, três matérias e conversão de horas para minutos | `modelos/Disciplina.py`, `servicos/Plataforma.py` |
+| 2 — Encapsulamento | Meta privada, avanço controlado e validações | `modelos/MetaEstudo.py` |
+| 3 — Abstração e herança | Usuario abstrato; Administrador, Responsavel e Discente | `modelos/Usuarios.py` |
+| 4 — Polimorfismo dinâmico | Pomodoro, Exercícios e Leitura com XP e feedback próprios | `modelos/Sessoes.py` |
+| 5 — Sobrecarga | Três formas de chamar RegistrarEstudo | `modelos/Usuarios.py`, `exemplos/Demonstracao.py` |
+| 6 — Interfaces | INotificador e IExportavelJson; painel e e-mail simulado | `modelos/Interfaces.py`, `servicos/Notificadores.py` |
+| 7 — Associação e agregação | Responsável/discentes e trilha/disciplinas | `modelos/Usuarios.py`, `modelos/Relacionamentos.py` |
+| 8 — Composição e dependência | Plano/itens e serviço de alerta | `modelos/Relacionamentos.py` |
+| 9 — Tela gráfica | Formulário, perfis, histórico, XP e barra de progresso | `interface/TelaEstudo.py` |
+| 10 — Integração | POST de sessões/metas e GET do histórico no backend C# | `servicos/ClienteBackendEstudo.py`, `Backend/` |
 
 ## Dependências
 
@@ -129,40 +129,59 @@ Editar o nome sem clicar em carregar não troca o perfil ativo. O cabeçalho mos
 
 ```text
 Trabalho-POO/
-├── main.py                     # Inicia a tela ou a demonstração
-├── Disciplina.py               # Missão 1; também pode rodar sozinha
-├── MetaEstudo.py               # Missão 2
-├── Usuarios.py                 # Missões 3, 5 e associação da 7
-├── Sessoes.py                  # Missões 4 e 6
-├── Interfaces.py               # Contratos da missão 6
-├── Notificadores.py            # Alertas com Rich / mensagem para a tela
-├── Relacionamentos.py          # Trilhas, composição e serviço de alerta
-├── Plataforma.py               # Coordena os objetos e a gravação
-├── ClienteBackendEstudo.py     # Cliente HTTP e alternativa SQLite
-├── TelaEstudo.py               # Interface Tkinter da missão 9
-├── Demonstracao.py             # Exemplos das missões 1 a 8 com Rich
-├── Validacoes.py               # Validações compartilhadas
+├── main.py
+├── README.md
+├── requirements.txt
+├── .gitignore
 ├── iniciar_projeto.bat
 ├── iniciar_local.bat
 ├── demonstrar.bat
-├── requirements.txt
-├── README.md
-├── .gitignore
+├── modelos/
+│   ├── __init__.py
+│   ├── Disciplina.py
+│   ├── MetaEstudo.py
+│   ├── Usuarios.py
+│   ├── Sessoes.py
+│   ├── Interfaces.py
+│   └── Relacionamentos.py
+├── servicos/
+│   ├── __init__.py
+│   ├── Plataforma.py
+│   ├── ClienteBackendEstudo.py
+│   ├── Notificadores.py
+│   └── Validacoes.py
+├── interface/
+│   ├── __init__.py
+│   └── TelaEstudo.py
+├── exemplos/
+│   ├── __init__.py
+│   └── Demonstracao.py
 ├── Backend/
-│   ├── iniciar_backend.bat         # Inicializador; requer os arquivos da aula
-│   ├── mysql_config.exemplo.txt    # Exemplo sem senha pessoal
-│   └── README.md                   # Quais arquivos copiar do material
+│   ├── iniciar_backend.bat
+│   ├── mysql_config.exemplo.txt
+│   └── README.md
+├── tests/
+│   ├── __init__.py
+│   ├── apoio.py
+│   ├── test_pbl.py
+│   ├── test_interface.py
+│   └── test_backend_real.py
 ├── docs/
-│   ├── PROCESSO.md             # Explicação do desenvolvimento e conceitos
-│   └── VALIDACAO.json          # Resultado da verificação
-└── tests/
-    ├── apoio.py
-    ├── test_pbl.py
-    ├── test_interface.py
-    └── test_backend_real.py
+│   ├── PROCESSO.md
+│   └── VALIDACAO.json
+└── dados/                       # Criada localmente; ignorada pelo Git
 ```
 
 `dados/`, ambientes virtuais, cache do Python, arquivos fornecidos do backend e configurações pessoais não entram no Git. O ZIP local completo inclui os binários e o fonte recebidos no material; o clone do GitHub precisa recebê-los separadamente na pasta `Backend/`.
+
+Os pacotes têm `__init__.py`. Os imports usam o caminho completo, por exemplo:
+
+```python
+from modelos.Disciplina import Disciplina
+from servicos.Plataforma import Plataforma
+```
+
+Execute os comandos na raiz do projeto. Para executar somente o exemplo da primeira missão, use `python -m modelos.Disciplina`; para a demonstração completa, `python -m exemplos.Demonstracao`.
 
 ## Fórmulas de XP e exemplo
 

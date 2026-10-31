@@ -7,12 +7,12 @@ import subprocess
 import tempfile
 import time
 import unittest
-from apoio import PastaTemporaria
+from tests.apoio import PastaTemporaria
 
-from Plataforma import Plataforma
-from Sessoes import SessaoExercicios, SessaoLeitura, SessaoPomodoro
-from Disciplina import Disciplina
-from ClienteBackendEstudo import ClienteBackendEstudo, ErroBackend
+from servicos.Plataforma import Plataforma
+from modelos.Sessoes import SessaoExercicios, SessaoLeitura, SessaoPomodoro
+from modelos.Disciplina import Disciplina
+from servicos.ClienteBackendEstudo import ClienteBackendEstudo, ErroBackend
 
 
 BACKEND = Path(os.environ.get("FECAP_BACKEND_DIR",

@@ -4,15 +4,15 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from apoio import PastaTemporaria
-from ClienteBackendEstudo import ClienteBackendEstudo, ErroBackend, RepositorioSQLite
-from Disciplina import Disciplina
-from MetaEstudo import MetaEstudo
-from Notificadores import NotificadorEmail, NotificadorPainel
-from Plataforma import Plataforma
-from Relacionamentos import PlanoEstudo, ServicoAlertaResponsavel, TrilhaEstudo
-from Sessoes import SessaoEstudo, SessaoPomodoro, SessaoExercicios, SessaoLeitura
-from Usuarios import Usuario, Administrador, Responsavel, Discente
+from tests.apoio import PastaTemporaria
+from servicos.ClienteBackendEstudo import ClienteBackendEstudo, ErroBackend, RepositorioSQLite
+from modelos.Disciplina import Disciplina
+from modelos.MetaEstudo import MetaEstudo
+from servicos.Notificadores import NotificadorEmail, NotificadorPainel
+from servicos.Plataforma import Plataforma
+from modelos.Relacionamentos import PlanoEstudo, ServicoAlertaResponsavel, TrilhaEstudo
+from modelos.Sessoes import SessaoEstudo, SessaoPomodoro, SessaoExercicios, SessaoLeitura
+from modelos.Usuarios import Usuario, Administrador, Responsavel, Discente
 
 
 class TestPBL(unittest.TestCase):

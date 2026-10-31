@@ -2,8 +2,8 @@ from rich import print
 from rich.panel import Panel
 from rich.text import Text
 
-from Interfaces import INotificador
-from Validacoes import ValidarTexto
+from modelos.Interfaces import INotificador
+from servicos.Validacoes import ValidarTexto
 
 
 class NotificadorPainel(INotificador):

@@ -4,10 +4,10 @@ import tempfile
 import time
 import unittest
 from unittest.mock import patch
-from apoio import PastaTemporaria
+from tests.apoio import PastaTemporaria
 
-from TelaEstudo import TelaEstudo
-from ClienteBackendEstudo import RepositorioSQLite
+from interface.TelaEstudo import TelaEstudo
+from servicos.ClienteBackendEstudo import RepositorioSQLite
 
 
 class TestInterface(unittest.TestCase):
@@ -17,7 +17,7 @@ class TestInterface(unittest.TestCase):
             janela.withdraw()
             erros = []
             try:
-                with patch("TelaEstudo.messagebox.showerror", side_effect=lambda *a, **k: erros.append(a)):
+                with patch("interface.TelaEstudo.messagebox.showerror", side_effect=lambda *a, **k: erros.append(a)):
                     def aguardar():
                         limite = time.monotonic() + 10
                         while janela.ocupado and time.monotonic() < limite:

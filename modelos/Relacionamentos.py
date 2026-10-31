@@ -1,5 +1,5 @@
-from Interfaces import INotificador
-from Validacoes import ValidarInteiro, ValidarTexto
+from modelos.Interfaces import INotificador
+from servicos.Validacoes import ValidarInteiro, ValidarTexto
 
 
 DIAS_SEMANA = ("Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo")

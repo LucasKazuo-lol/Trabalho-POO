@@ -1,8 +1,8 @@
-from Disciplina import Disciplina
-from MetaEstudo import MetaEstudo
-from Relacionamentos import TrilhaEstudo
-from Sessoes import SessaoHistorica
-from Usuarios import Administrador, Discente, Responsavel
+from modelos.Disciplina import Disciplina
+from modelos.MetaEstudo import MetaEstudo
+from modelos.Relacionamentos import TrilhaEstudo
+from modelos.Sessoes import SessaoHistorica
+from modelos.Usuarios import Administrador, Discente, Responsavel
 
 
 class Plataforma:

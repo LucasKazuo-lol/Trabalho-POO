@@ -3,12 +3,12 @@ from rich import print
 from rich.panel import Panel
 from rich.text import Text
 
-from MetaEstudo import MetaEstudo
-from Notificadores import NotificadorEmail, NotificadorPainel
-from Plataforma import Plataforma
-from Relacionamentos import PlanoEstudo, ServicoAlertaResponsavel
-from Sessoes import SessaoPomodoro, SessaoExercicios, SessaoLeitura
-from Usuarios import Discente
+from modelos.MetaEstudo import MetaEstudo
+from servicos.Notificadores import NotificadorEmail, NotificadorPainel
+from servicos.Plataforma import Plataforma
+from modelos.Relacionamentos import PlanoEstudo, ServicoAlertaResponsavel
+from modelos.Sessoes import SessaoPomodoro, SessaoExercicios, SessaoLeitura
+from modelos.Usuarios import Discente
 
 
 def Demonstrar():

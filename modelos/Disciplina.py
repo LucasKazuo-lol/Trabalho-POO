@@ -103,7 +103,7 @@ def main():
     print(Disciplina.__doc__)
 
 
-# Executa o programa ao chamar python Disciplina.py.
+# Executa o programa ao chamar python -m modelos.Disciplina.
 # Importar a classe em outro arquivo não executa as impressões automaticamente.
 if __name__ == "__main__":
     main()

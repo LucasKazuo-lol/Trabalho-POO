@@ -10,9 +10,9 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urlsplit
 from urllib.request import ProxyHandler, Request, build_opener, urlopen
 
-from MetaEstudo import MetaEstudo
-from Sessoes import SessaoEstudo
-from Validacoes import ValidarTexto
+from modelos.MetaEstudo import MetaEstudo
+from modelos.Sessoes import SessaoEstudo
+from servicos.Validacoes import ValidarTexto
 
 
 class ErroBackend(RuntimeError):

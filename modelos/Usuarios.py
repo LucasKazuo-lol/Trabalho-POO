@@ -3,9 +3,9 @@ from hashlib import pbkdf2_hmac
 from hmac import compare_digest
 import secrets
 
-from Disciplina import Disciplina
-from Sessoes import SessaoEstudo, SessaoPomodoro, SessaoLeitura
-from Validacoes import ValidarInteiro, ValidarTexto
+from modelos.Disciplina import Disciplina
+from modelos.Sessoes import SessaoEstudo, SessaoPomodoro, SessaoLeitura
+from servicos.Validacoes import ValidarInteiro, ValidarTexto
 
 
 class Usuario(ABC):

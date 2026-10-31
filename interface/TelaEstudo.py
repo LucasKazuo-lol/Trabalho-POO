@@ -6,10 +6,10 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
 # As regras ficam nas classes; os eventos apenas leem os campos e chamam métodos.
-from Plataforma import Plataforma
-from Relacionamentos import DIAS_SEMANA, PlanoEstudo, ServicoAlertaResponsavel
-from Notificadores import NotificadorEmail, NotificadorPainel
-from Sessoes import SessaoExercicios, SessaoLeitura, SessaoPomodoro
+from servicos.Plataforma import Plataforma
+from modelos.Relacionamentos import DIAS_SEMANA, PlanoEstudo, ServicoAlertaResponsavel
+from servicos.Notificadores import NotificadorEmail, NotificadorPainel
+from modelos.Sessoes import SessaoExercicios, SessaoLeitura, SessaoPomodoro
 
 
 class TelaEstudo(tk.Tk):
