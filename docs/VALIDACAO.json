@@ -1,0 +1,20 @@
+{
+  "data": "2026-10-30",
+  "comando": "python -m unittest discover -s tests -v",
+  "testes": 14,
+  "falhas": 0,
+  "erros": 0,
+  "ignorados": 0,
+  "duracaoSegundos": 8.09,
+  "cenario": {
+    "sessoes": 3,
+    "minutos": 95,
+    "xp": 270,
+    "metaMinutos": 100,
+    "percentual": 95
+  },
+  "interface": "Eventos e controles de uma janela real Tkinter, ocultada durante o teste",
+  "integracao": "POST/GET contra copia temporaria do backend C# e persistencia apos reiniciar",
+  "persistenciaBackendTestada": "JSON local",
+  "mysqlAtivoValidado": false
+}

@@ -25,12 +25,27 @@ class Disciplina:
 
         # A expressão condicional valida a carga horária no próprio construtor.
         # Por exemplo: 4 permanece 4, enquanto 0 ou -3 se tornam 2 horas.
+        if type(hora) is not int:
+            raise ValueError("A carga horária deve ser um número inteiro.")
         self.cargaHorariaSemanalHoras = hora if hora > 0 else 2
 
     def CalcularCargaEmMinutos(self):
         """Retorna a carga semanal em minutos: cada hora equivale a 60 minutos."""
         # Retornar o resultado permite reutilizá-lo sem criar um atributo minuto.
         return self.cargaHorariaSemanalHoras * 60
+
+    # Getters usados pelas outras classes do projeto, como nas dicas da aula.
+    def GetCodigo(self):
+        return self.codigo
+
+    def GetNome(self):
+        return self.nome
+
+    def GetCategoria(self):
+        return self.categoria
+
+    def GetCargaHorariaSemanalHoras(self):
+        return self.cargaHorariaSemanalHoras
 
     def ExibirResumo(self):
         """Retorna uma string com os dados e a carga horária da disciplina."""

@@ -3,3 +3,14 @@
 venv/
 __pycache__/
 *.py[cod]
+# Dados gerados e configuração pessoal do banco não são publicados.
+dados/
+Backend/dados_estudo_local.json
+Backend/mysql_config.txt
+Backend/Source/bin/
+Backend/Source/obj/
+# Arquivos recebidos da aula são usados localmente; não são publicados por padrão.
+Backend/BackendEstudoAPI*
+Backend/MySqlConnector.dll
+Backend/banco_estudo.sql
+Backend/Source/
